@@ -1,0 +1,16 @@
+{
+  "name": "stanchei",
+  "version": "1.0.0",
+  "description": "crypto api from coinmarketcap",
+  "main": "script.js",
+  "scripts": {
+    
+  },
+  "author": "dhanush",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.7"
+  }
+}
