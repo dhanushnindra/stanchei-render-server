@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
   fetch(url)
     .then((response) => {
       console.log("\\\\THIS IS RESPONSE AFTER FETCHING 20 LISTED JSON CRYPTO FROM COINMARKETCAP API \\\\")
-      console.log(response);
+      //console.log(response);
       
       response.json()
       
@@ -29,9 +29,9 @@ app.get('/', (req, res) => {
     })
     .then((da) => {
       console.log("\\\\THIS IS RESPONSE CONVERTED INTP JS OBJECT W JSON DATA FETCHED FROM API \\\\")
-      console.log(da)
-      data =  JSON.stringify(da);
-      res.send(data);
+      //console.log(da)
+      //data =  JSON.stringify(da);
+      res.json(da);
       
     });
 
@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
 
 
 
-    
+
 app.listen(process.env.PORT || 3000, function() {
     console.log('server running on port 3000', '');
 });
