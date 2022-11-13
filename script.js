@@ -31,6 +31,7 @@ app.get('/', (req, res) => {
       console.log("\\\\THIS IS RESPONSE CONVERTED INTP JS OBJECT W JSON DATA FETCHED FROM API \\\\")
       //console.log(da)
       //data =  JSON.stringify(da);
+      console.log(da)
       res.json(da);
       
     }).then(r => res.send());
