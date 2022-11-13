@@ -13,13 +13,13 @@ app.use(cors({
 
 app.get('/', (req, res) => {
   
-  const url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=20&convert=USD&CMC_PRO_API_KEY="+process.env.MY_API_KEY
+  const url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=20&convert=USD"
   ;
 
   let data = 'WOrking'
 
 
-  fetch(url)
+  fetch(url,{headers: { 'X-CMC_PRO_API_KEY':process.env.MY_API_KEY }})
     .then((response) => {
       console.log("\\\\THIS IS RESPONSE AFTER FETCHING 20 LISTED JSON CRYPTO FROM COINMARKETCAP API \\\\")
       console.log(response);
