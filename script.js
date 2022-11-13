@@ -35,7 +35,7 @@ new Promise(async (resolve, reject) => {
     console.log(json);
     resolve(json);
   }
-});
+}).then(js => res.json(js));
   
   const url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=20&convert=USD"
   ;
