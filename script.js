@@ -16,12 +16,13 @@ app.get('/', (req, res) => {
 
   let data = 'WOrking'
   fetch(url)
-    .then(response => {
+    .then((response) => {
 
       res.send(response);
       response.json()
+      
     })
-    .then(da => {
+    .then((da) => {
       data = da ;
       console.log(da)
       
