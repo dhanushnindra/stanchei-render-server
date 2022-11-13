@@ -17,10 +17,10 @@ app.get('/', (req, res) => {
   let data = 'WOrking'
   fetch(url)
     .then((response) => {
-
+      console.log(response);
       res.send(response);
       response.json()
-      
+
     })
     .then((da) => {
       data = da ;
