@@ -2,6 +2,7 @@ const express = require('express');
 const fetch = require('node-fetch');
 const app = express();
 const cors = require('cors');
+require('dotenv').config()
 
 app.use(cors({
   credentials: true,
@@ -12,7 +13,7 @@ app.use(cors({
 
 app.get('/', (req, res) => {
   
-  const url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=20&convert=USD&CMC_PRO_API_KEY=59061bf5-18f0-4604-8f07-0fef5bbed287"
+  const url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=20&convert=USD&CMC_PRO_API_KEY=${process.env.DARKSKY_API_KEY}"
   ;
 
   let data = 'WOrking'
