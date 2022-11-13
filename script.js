@@ -15,13 +15,11 @@ app.get('/', (req, res) => {
   ;
 
   let data = 'WOrking'
-  fetch(url,{
-      mode:'cors'
-    })
-    .then(res => {
+  fetch(url)
+    .then(response => {
 
-      res.send(data);
-      res.json()
+      res.send(response);
+      response.json()
     })
     .then(da => {
       data = da ;
