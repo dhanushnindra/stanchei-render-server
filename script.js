@@ -4,13 +4,10 @@ const app = express();
 const cors = require('cors');
 
 app.use(
-    cors({
-        credentials: true,
-        origin: true
-    })
+    cors()
 );
 
-app.options('*', cors());
+// app.options('*', cors());
 
 app.get('/', (req, res) => {
   
