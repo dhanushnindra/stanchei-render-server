@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
   fetch(url)
     .then((response) => {
       console.log("\\\\THIS IS RESPONSE AFTER FETCHING 20 LISTED JSON CRYPTO FROM COINMARKETCAP API \\\\")
-      //console.log(response);
+      console.log(response);
       
       response.json()
       
