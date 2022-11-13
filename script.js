@@ -13,7 +13,7 @@ app.use(cors({
 
 app.get('/', (req, res) => {
   
-  const url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=20&convert=USD&CMC_PRO_API_KEY=${process.env.DARKSKY_API_KEY}"
+  const url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=20&convert=USD&CMC_PRO_API_KEY=${process.env.MY_API_KEY}"
   ;
 
   let data = 'WOrking'
