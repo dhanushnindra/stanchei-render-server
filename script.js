@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
       //data =  JSON.stringify(da);
       res.json(da);
       
-    });
+    }).then(r => res.send());
 
     
     });
