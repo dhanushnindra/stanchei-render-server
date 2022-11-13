@@ -18,13 +18,15 @@ app.get('/', (req, res) => {
   fetch(url)
     .then((response) => {
       console.log(response);
-      res.send(response);
+      
       response.json()
+      
 
     })
     .then((da) => {
-      data = da ;
+      data =  JSON.stringify(da);
       console.log(da)
+      res.send(da);
       
     });
 
