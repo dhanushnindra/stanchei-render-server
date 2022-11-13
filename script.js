@@ -3,9 +3,10 @@ const fetch = require('node-fetch');
 const app = express();
 const cors = require('cors');
 
-app.use(
-    cors()
-);
+app.use(cors({
+  credentials: true,
+  origin: '*'
+}));
 
 // app.options('*', cors());
 
@@ -15,8 +16,11 @@ app.get('/', (req, res) => {
   ;
 
   let data = 'WOrking'
+
+
   fetch(url)
     .then((response) => {
+      console.log("\\\\THIS IS RESPONSE AFTER FETCHING 20 LISTED JSON CRYPTO FROM COINMARKETCAP API \\\\")
       console.log(response);
       
       response.json()
@@ -24,15 +28,19 @@ app.get('/', (req, res) => {
 
     })
     .then((da) => {
-      data =  JSON.stringify(da);
+      console.log("\\\\THIS IS RESPONSE CONVERTED INTP JS OBJECT W JSON DATA FETCHED FROM API \\\\")
       console.log(da)
-      res.send(da);
+      data =  JSON.stringify(da);
+      res.send(data);
       
     });
 
     
     });
 
+
+
+    
 app.listen(process.env.PORT || 3000, function() {
     console.log('server running on port 3000', '');
 });
