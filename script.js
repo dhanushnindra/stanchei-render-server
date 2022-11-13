@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 let response = null;
 new Promise(async (resolve, reject) => {
   try {
-    response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
+    response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=20&convert=USD', {
       headers: {
         'X-CMC_PRO_API_KEY': process.env.MY_API_KEY,
       },
