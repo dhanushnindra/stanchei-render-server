@@ -46,9 +46,9 @@ app.get('/', (req, res) => {
   fetch(url,{headers: { 'X-CMC_PRO_API_KEY':process.env.CMC_API_KEY }})
     .then((response) => {
       console.log("\\\\THIS IS RESPONSE AFTER FETCHING 20 LISTED JSON CRYPTO FROM COINMARKETCAP API \\\\")
-      console.log(response);
+      console.log(response.body);
       
-      response.json()
+      return response.body.json()
       
 
     })
@@ -57,9 +57,9 @@ app.get('/', (req, res) => {
       //console.log(da)
       //data =  JSON.stringify(da);
       console.log(da)
-      res.json(da);
+      return da;
       
-    }).then(r => res.send());
+    }).then(r => res.send(r));
 
     
     });
