@@ -48,22 +48,21 @@ app.get('/', (req, res) => {
       console.log("\\\\THIS IS RESPONSE AFTER FETCHING 20 LISTED JSON CRYPTO FROM COINMARKETCAP API \\\\")
       console.log(response.body);
       
-      return response.body.json()
+      return res.send(response.body)
       
 
-    })
-    .then((da) => {
-      console.log("\\\\THIS IS RESPONSE CONVERTED INTP JS OBJECT W JSON DATA FETCHED FROM API \\\\")
-      //console.log(da)
-      //data =  JSON.stringify(da);
-      console.log(da)
-      return da;
+    }).catch(e => console.log(e))
+//     .then((da) => {
+//       console.log("\\\\THIS IS RESPONSE CONVERTED INTP JS OBJECT W JSON DATA FETCHED FROM API \\\\")
+//       //console.log(da)
+//       //data =  JSON.stringify(da);
+//       console.log(da)
+//       return da;
       
-    }).then(r => res.send(r));
+//     }).then(r => res.send(r));
 
     
-    });
-
+ 
 
 
 
