@@ -61,7 +61,7 @@ app.get('/', (req, res) => {
       
 //     }).then(r => res.send(r));
 
-};
+});
  
 
 
